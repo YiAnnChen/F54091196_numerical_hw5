@@ -25,13 +25,13 @@ for i in range(1, len(t_values)):
     y_values.append(y)
     t_current += h
 
-# 計算真實解
+
 y_exact = exact_solution(t_values)
 
-# 計算誤差
+
 errors = np.abs(np.array(y_values) - y_exact)
 
-# 顯示結果表格
+
 print(f"{'t':>5} {'Euler y':>10} {'Exact y':>12} {'Error':>10}")
 for i in range(len(t_values)):
     print(f"{t_values[i]:5.2f} {y_values[i]:10.5f} {y_exact[i]:12.5f} {errors[i]:10.5f}")
