@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/chenyian/Desktop/F54091196_numerical_hw5",
+      "program": "/Users/chenyian/Desktop/F54091196_numerical_hw5/build/Debug/outDebug"
+    }
+  ]
+}
