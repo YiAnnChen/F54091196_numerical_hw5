@@ -7,8 +7,9 @@ def f(t, y):
 
 # 定義 df/dt
 def df_dt(t, y):
-    return -(y / t**2) - 2*(y**2) / (t**3)
-
+    term1 = -(y / t**2) - 2*(y**2) / (t**3)
+    term2 = (1/t) + (2*y)/(t**2)
+    return term1 + term2 * f(t,y)
 # 真實解 y(t)
 def exact_solution(t):
     return t * np.tan(np.log(t))
@@ -38,7 +39,7 @@ errors = np.abs(np.array(y_values) - y_exact)
 
 print(f"{'t':>5} {'Taylor y':>10} {'Exact y':>12} {'Error':>10}")
 for i in range(len(t_values)):
-    print(f"{t_values[i]:5.2f} {y_values[i]:10.5f} {y_exact[i]:12.5f} {errors[i]:10.5f}")
+    print(f"{t_values[i]:5.7f} {y_values[i]:10.7f} {y_exact[i]:12.5f} {errors[i]:10.7f}")
 
 
 
